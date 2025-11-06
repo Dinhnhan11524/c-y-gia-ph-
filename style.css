@@ -1,0 +1,238 @@
+/* 🌿 GIAO DIỆN MỚI – HÀI HÒA VÀ TỰ NHIÊN (Tông Màu Nhẹ Nhàng) */
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+    width: 250px;
+    /* CHỈNH SỬA: Dùng màu Indigo nhẹ nhàng hơn cho sidebar */
+    background: linear-gradient(to bottom, #7e22ce, #63f182);
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.6rem;
+    box-shadow: 3px 0 15px rgba(0,0,0,0.15); /* Shadow đậm hơn một chút */
+    animation: slideIn 0.4s ease;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+}
+
+.menu {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.menu-btn {
+    padding: 0.7rem 1rem;
+    text-align: left;
+    border-radius: 0.6rem;
+    transition: 0.3s;
+    font-weight: 500;
+    background: transparent;
+}
+.menu-btn:hover { background: rgba(255,255,255,0.3); transform: translateX(5px); }
+.menu-btn.active { background: rgba(255,255,255,0.4); box-shadow: inset 0 0 6px rgba(0,0,0,0.1); }
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* ========== BUTTONS ========== */
+.btn-indigo {
+    /* CHỈNH SỬA: Màu Indigo nhẹ hơn và đồng nhất hơn */
+    background: linear-gradient(to right, #818cf8, #6366f1);
+    color: white;
+    border-radius: 0.6rem;
+    padding: 0.55rem 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.btn-indigo:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.btn-green {
+    /* CHỈNH SỬA: Màu xanh lá cây nhẹ hơn */
+    background: linear-gradient(to right, #34d399, #58e9b9);
+    color: white;
+    border-radius: 0.6rem;
+    padding: 0.55rem;
+    transition: 0.25s;
+}
+.btn-green:hover { transform: scale(1.05); opacity: 0.9; }
+
+.btn-red {
+    /* CHỈNH SỬA: Màu đỏ nhẹ hơn */
+    background: linear-gradient(to right, #f87171, #e4ef44);
+    color: white;
+    border-radius: 0.6rem;
+    padding: 0.55rem;
+    transition: 0.25s;
+}
+.btn-red:hover { transform: scale(1.05); opacity: 0.9; }
+
+.btn-purple {
+    /* CHỈNH SỬA: Màu tím nhạt hơn */
+    background: linear-gradient(to right, #a78bfa, #8b5cf6);
+    color: white;
+    border-radius: 0.6rem;
+    padding: 0.55rem 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.btn-purple:hover { transform: scale(1.05); opacity: 0.95; }
+
+.btn-gray {
+    /* CHỈNH SỬA: Màu xám sáng, tạo cảm giác nhẹ nhàng */
+    background: #e5e7eb;
+    color: #a8c6f5;
+    padding: 0.55rem 1rem;
+    border-radius: 0.6rem;
+    transition: 0.2s;
+    font-weight: 500;
+}
+.btn-gray:hover { background: #d1d5db; }
+
+/* ========== MAIN AREA ========== */
+.main-area {
+    margin-left: 270px;
+    padding: 2rem;
+    /* CHỈNH SỬA: Khung nền màu xám trắng nhẹ */
+    background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
+    min-height: 100vh;
+    transition: background 0.4s ease;
+    animation: fadeIn 0.6s ease;
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    /* Shadow nhẹ hơn để tạo cảm giác "nổi" nhẹ nhàng */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    animation: fadeIn 0.4s ease;
+    transition: transform 0.3s ease;
+    border: 1px solid #f3f4f6; /* Thêm viền mỏng */
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.09); }
+
+.section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #4f46e5; /* Đổi màu tiêu đề sang tông Indigo chính */
+    margin-bottom: 1rem;
+    text-shadow: none;
+}
+
+/* ========== TREE AREA ========== */
+#tree {
+    width: 100%;
+    height: 600px;
+    border: 2px dashed #a5b4fc; /* Màu viền nhạt hơn */
+    border-radius: 12px;
+    background: #f3a760;
+    transition: 0.3s;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+}
+#tree:hover { border-color: #818cf8; background: #f3f4ff; }
+
+/* ========== MODAL ========== */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* Độ tối giảm đi */
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    backdrop-filter: blur(5px);
+}
+.overlay.active { display: flex; animation: fadeIn 0.3s ease; }
+
+.modal {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 400px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Shadow nhẹ hơn */
+    animation: popIn 0.3s ease;
+    transform-origin: center;
+}
+
+.modal-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4f46e5; /* Đổi màu tiêu đề modal */
+    margin-bottom: 1rem;
+}
+
+.modal-label {
+    font-weight: 500;
+    color: #4b5563; /* Màu chữ tối hơn một chút cho dễ đọc */
+    font-size: 0.95rem;
+}
+
+/* ========== INPUTS ========== */
+.input-box {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border-radius: 0.6rem;
+    border: 1px solid #e5e7eb; /* Viền sáng hơn */
+    margin-bottom: 0.6rem;
+    transition: 0.25s;
+    outline: none;
+    background: #ffffff; /* Nền trắng */
+}
+.input-box:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px #c7d2fe;
+    background: white;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.fade-in { animation: fadeIn 0.5s ease; }
+.slide-in-left { animation: slideIn 0.5s ease; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .sidebar { width: 200px; }
+    .main-area { margin-left: 220px; padding: 1rem; }
+    .modal { width: 90%; }
+}
+.btn-purple, .btn-green, .btn-red {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.btn-purple:hover, .btn-green:hover, .btn-red:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
